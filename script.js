@@ -46,6 +46,8 @@ function displayResults(responseJson) {
                 <p> ${responseJson.data[i].url} </p> 
                 </li>`
                 )}
+                
+                //remove hidden class to show results
         $('#results').removeClass('.hidden')
         }
 
