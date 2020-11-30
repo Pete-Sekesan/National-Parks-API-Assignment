@@ -39,6 +39,7 @@ function displayResults(responseJson) {
     $('#results').empty();
 
     for (let i = 0; i < responseJson.data.length; i++) {
+        //show results on page 
         $('#results-list').append(
             `<li>
                 <h2> ${responseJson.data[i].fullName} </h2> 
