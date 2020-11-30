@@ -9,16 +9,16 @@ function formatQueryParams(params) {
     return queryItems.join('&');
 }
 //create a get parks function
-function getParks(location, maxResults = 10) {
+function getParks(state, limit = 10) {
     const params = {
-        stateCode: location,
+        stateCode: state,
         api_key: apiKey,
-        maxResults,
+        limit: limit
     };
     const queryString = formatQueryParams(params)
     const url = searchURL + '?' + queryString;
     //check for correct url
-    console.log(url);
+    console.log(url)
 
     fetch(url)
         .then(response => {
@@ -50,9 +50,9 @@ function displayResults(responseJson) {
 function watchForm() {
     $('form').submit(event => {
         event.preventDefault();
-        const location = $('#search-state').val();
-        const maxResults = $('#search-max-results').val();
-        getParks(location, maxResults);
+        const state = $('#search-state').val();
+        const limit = $('#search-max-results').val();
+        getParks(state, limit);
     });
 }
 
