@@ -45,7 +45,9 @@ function displayResults(responseJson) {
                 <p> ${responseJson.data[i].description} </p> 
                 <p> ${responseJson.data[i].url} </p> 
                 </li>`
-            )}}
+                )}
+        $('#results').removeClass('.hidden')
+        }
 
 function watchForm() {
     $('form').submit(event => {
