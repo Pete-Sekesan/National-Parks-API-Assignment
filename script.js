@@ -35,9 +35,10 @@ function getParks(state, limit = 10) {
 }
 
 function displayResults(responseJson) {
+    console.log('display function ran')
     //clear previous results
-    $('#results').empty();
-
+    $('#results-list').empty();
+    console.log('results emptied')
     for (let i = 0; i < responseJson.data.length; i++) {
         //show results on page 
         $('#results-list').append(
@@ -45,12 +46,15 @@ function displayResults(responseJson) {
                 <h2> ${responseJson.data[i].fullName} </h2> 
                 <p> ${responseJson.data[i].description} </p> 
                 <p> ${responseJson.data[i].url} </p> 
-                </li>`
-                )}
+                </li>` 
+        ) 
+        console.log('results appwnded')
+    } 
                 
-                //remove hidden class to show results
-        $('#results').removeClass('.hidden')
-        }
+    //remove hidden class to show results
+    $('#results').removeClass('hidden')
+console.log('results hidden')
+}
 
 function watchForm() {
     $('form').submit(event => {
