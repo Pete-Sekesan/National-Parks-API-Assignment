@@ -11,7 +11,7 @@ function formatQueryParams(params) {
 //create a get parks function
 function getParks(location, maxResults = 10) {
     const params = {
-        stateCode: state,
+        stateCode: location,
         api_key: apiKey,
         maxResults,
     };
@@ -40,11 +40,11 @@ function displayResults(responseJson) {
 
     for (let i = 0; i < responseJson.data.length; i++) {
         $('#results-list').append(
-            <li>
+            `<li>
                 <h2> ${responseJson.data[i].fullName} </h2> 
                 <p> ${responseJson.data[i].description} </p> 
                 <p> ${responseJson.data[i].url} </p> 
-                </li>
+                </li>`
             )}}
 
 function watchForm() {
