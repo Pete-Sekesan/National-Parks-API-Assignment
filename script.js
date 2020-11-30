@@ -40,20 +40,21 @@ function displayResults(responseJson) {
 
     for (let i = 0; i < responseJson.data.length; i++) {
         $('#results-list').append(
-            <li> <h2> $ {responseJson.data[i].fullName} </h2> 
-            <p> ${responseJson.data[i].description} </p> 
-            <p> $ {responseJson.data[i].url} </p> 
-            </li >
-            )
-        }
+            <li>
+                <h2> $ {responseJson.data[i].fullName} </h2> 
+                <p> ${responseJson.data[i].description} </p> 
+                <p> ${responseJson.data[i].url} </p> 
+                </li>
+            )}}
 
-    watchForm() {
-        $('form').submit(event => {
-            event.preventDefault();
-            const location = $('#search-state').val();
-            const maxResults = $('#search-max-results').val();
-            getParks(location, maxResults)
-        })
-    }
+function watchForm() {
+    $('form').submit(event => {
+        event.preventDefault();
+        const location = $('#search-state').val();
+        const maxResults = $('#search-max-results').val();
+        getParks(searchTerm, maxResults);
+    });
 }
+
+  
 $(watchForm)
