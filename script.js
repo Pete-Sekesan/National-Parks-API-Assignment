@@ -52,7 +52,7 @@ function watchForm() {
         event.preventDefault();
         const location = $('#search-state').val();
         const maxResults = $('#search-max-results').val();
-        getParks(searchTerm, maxResults);
+        getParks(location, maxResults);
     });
 }
 
