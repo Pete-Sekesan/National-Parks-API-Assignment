@@ -17,7 +17,9 @@ function getParks(state, limit = 10) {
         limit: limit
     };
     //const queryString = formatQueryParams(params)
+    //const url = searchURL + '?' + queryString;
     const url = `${searchURL}?api_key=${apiKey}&stateCode=${state}&limit=${limit}`;
+
     //check for correct url
     console.log(url)
 
