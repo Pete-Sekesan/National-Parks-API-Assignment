@@ -46,7 +46,7 @@ function displayResults(responseJson) {
             `<li>
                 <h2> ${responseJson.data[i].fullName} </h2> 
                 <p> ${responseJson.data[i].description} </p> 
-                <p> <a href= "${responseJson.data[i].url}">${responseJson.data[i].url} </a> </p> 
+                <p> <a href= "${responseJson.data[i].url}" target="_blank">${responseJson.data[i].url} </a> </p> 
                 </li>` 
         ) 
         //$('#search-results').append(`<li><a href="${repo.owner.url}">${repo.name}</a></li>`)
