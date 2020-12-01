@@ -1,3 +1,4 @@
+'use strict';
 //create api and search url header
 const apiKey = 'UmctMZrZlKl6DiKxCR1NXCzwzdkiOfAVA1IHr8WV';
 const searchURL = 'https://developer.nps.gov/api/v1/parks';
@@ -49,7 +50,7 @@ function displayResults(responseJson) {
                 </li>` 
         ) 
         //$('#search-results').append(`<li><a href="${repo.owner.url}">${repo.name}</a></li>`)
-        console.log('results appwnded')
+        console.log('results appended')
     } 
                 
     //remove hidden class to show results
